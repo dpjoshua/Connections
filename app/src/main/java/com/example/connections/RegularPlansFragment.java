@@ -10,11 +10,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
-public class ProfileFragment extends Fragment {
+public class RegularPlansFragment extends Fragment {
 
     private String phoneNo;
     private String getName;
     private String getEmail;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class ProfileFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_profile, container, false);
+        View view = inflater.inflate(R.layout.fragment_regularplans, container, false);
         Toast.makeText(getActivity(), "Phone number: " + phoneNo, Toast.LENGTH_SHORT).show();
         Toast.makeText(getActivity(), " Email: " + getEmail, Toast.LENGTH_SHORT).show();
         Toast.makeText(getActivity(), "Name: " + getName, Toast.LENGTH_SHORT).show();

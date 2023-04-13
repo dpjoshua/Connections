@@ -22,6 +22,8 @@ import com.google.firebase.database.ValueEventListener;
 public class LogIn extends AppCompatActivity {
 
     Button login_Button;
+     EditText l_ed_phone;
+     EditText l_ed_password;
     DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReferenceFromUrl("https://connections-97d96-default-rtdb.firebaseio.com/");
 
     @Override
@@ -30,8 +32,11 @@ public class LogIn extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-        final EditText l_ed_phone = findViewById(R.id.l_phoneNo);
-        final EditText l_ed_password = findViewById(R.id.l_password);
+        l_ed_phone= findViewById(R.id.l_phoneNo);
+        l_ed_password= findViewById(R.id.l_password);
+
+
+
         login_Button = findViewById(R.id.l_button);
 
 
@@ -87,6 +92,7 @@ public class LogIn extends AppCompatActivity {
     }
     public void openNewActivity_forHome(){
         Intent intent = new Intent(this, MainActivity2.class);
+        intent.putExtra("phoneNo", l_ed_phone.getText().toString());
         startActivity(intent);
     }
 }

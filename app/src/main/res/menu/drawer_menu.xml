@@ -1,45 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
-
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home"
-            android:title="Home" />
-
+    <group>
         <item
             android:id="@+id/nav_profile"
-            android:icon="@drawable/ic_profile_icon"
-            android:title="Profile" />
+            android:title="Profile"
+            android:icon="@drawable/ic_profile_icon"/>
         <item
-            android:id="@+id/nav_orders"
-            android:icon="@drawable/ic_my_orders"
-            android:title="My Orders" />
-        <item
-            android:id="@+id/nav_setting"
-            android:icon="@drawable/ic_settings"
-            android:title="Settings" />
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/ic_home"/>
+
+
     </group>
-
-    <item android:title="Communicate">
+    <item android:title="Plans">
         <menu>
-            <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_about"
-                android:title="About" />
-            <item
-                android:id="@+id/nav_contact_us"
-                android:icon="@drawable/ic_contact"
-                android:title="Contact Us" />
-            <item
-                android:id="@+id/nav_logout"
-                android:icon="@drawable/ic_logout"
-                android:title="Logout" />
-
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_regular_plans"
+                    android:title="Regular Plans" />
+                <item
+                    android:id="@+id/nav_data_plans"
+                    android:title="Data Plans" />
+                <item
+                    android:id="@+id/nav_inter_roaming"
+                    android:title="International/Roaming Plans" />
+                <item
+                    android:id="@+id/nav_my_plans"
+                    android:title="My Plans" />
+                <item
+                    android:id="@+id/nav_offers"
+                    android:title="Offers and Deals" />
+            </group>
         </menu>
     </item>
 
-
+    <item android:title="Help">
+        <menu>
+            <item
+                android:id="@+id/nav_faq"
+                android:title="FAQ's" />
+            <item
+                android:id="@+id/nav_raise_ticket"
+                android:title="Raise Ticket" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout"/>
 </menu>
